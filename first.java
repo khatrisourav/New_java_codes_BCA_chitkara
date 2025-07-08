@@ -1,5 +1,11 @@
+
+
+
+
 public class first {
-public static void main (String [] gaurav){
-System.out.println("hello" + gaurav[0]);
+
+public static void main (String [] args ) {
+
+System.out.println ("hello world");
 }
-}
+} 

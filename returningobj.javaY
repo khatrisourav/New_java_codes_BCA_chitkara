@@ -1,0 +1,60 @@
+class  {
+    String name;
+    int marks;
+
+    returningobj(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    // NON-static method returning object
+    returningobj upgradeMarks() {
+        this.marks += 10;
+        return this;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Marks: " + marks);
+    }
+}
+
+public class returningobj  {
+    public static void main(String[] args) {
+        returningobj s1 = new returningobj("Aman", 75);
+
+        // Call method on object
+        s1.upgradeMarks();  // returns the same object with updated data
+
+        s1.display(); // Output: Name: Aman, Marks: 85
+    }
+}
+class Student {
+    String name;
+    int marks;
+
+    Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Marks: " + marks);
+    }
+
+    // Utility method that takes an object, updates it, and returns it
+    static Student boostMarks(Student s) {
+        s.marks += 20;  // updating the object
+        return s;       // returning the same object
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Riya", 60);
+
+        // Pass object, get back updated one
+        Student updated = Student.boostMarks(s1);
+
+        updated.display(); // Output: Name: Riya, Marks: 80
+    }
+}
