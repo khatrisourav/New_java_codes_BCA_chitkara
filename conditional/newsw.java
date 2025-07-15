@@ -1,18 +1,17 @@
-import java.util.Scanner;
-public class switch1{
-public static void main (String [] args ) {
-Scanner sc = new Scanner(System.in);
 
-String plan = sc.next();
+public class newsw{
+public static void main (String [] args ) {
+
+int  plan = 1;
 
 switch (plan) {
-	case "Silver":
+	case 1:
     	System.out.println("100GB Data - ₹199");
     	break;
-	case "Gold":
+	case 2:
     	System.out.println("200GB Data - ₹399");
     	break;
-	case "Platinum":
+	case 3:
     	System.out.println("Unlimited Data - ₹599");
     	break;
 	default:
@@ -21,5 +20,4 @@ switch (plan) {
 
 }
 }
-
 
